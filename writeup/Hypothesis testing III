@@ -1,0 +1,26 @@
+Hypothesis testing III
+
+Reproduction results
+
+The test statistic given in the paper is , and our reproduction results is . The two results are consistent. (? Fill blanks when the results available )
+
+Problems of the test
+
+Hypothesis 3 use the Lindeberg-Feller Central Limit Theorem to approximate the distribution of occurrences of mean containing triples. The p value of the test would be quite precise given that (1) the distribution of mean containing events for different triples are independently distributed (2) the Poisson distribution assumption is correct (3) the estimations of the Poisson distribution parameter $\lambda$ give us exact the true value of $\lambda$ (4) the mean containing probability associated with given Poisson $\lambda$ is properly calculated. 
+
+However, the hypothesis test is questionable in that:
+
+The Poisson distribution assumption remains unverified.
+The author use the mean of each triple as the estimation is Poisson distribution parameter. Although this estimation is unbiased, the MSE (variance) would be large: $MSE(\hat\lambda) = Var(\hat\lambda) = 1/9(\sum ^3_{i = q}Var(X_i)) = 1/3\lambda$. 
+The mean containing probability calculated is not the true probability but the conditioned probability given the gap is equal or greater than 2.
+
+Each of the above questions indicates that the $p_i$ used to calculated the variance of approximated normal distribution is not applicable. Lindeberg-Feller CLT would fail to approximate the distribution of mean containing triple occurrence.
+
+Suggestions:
+
+Verify the Poisson distribution assumption.
+Use the unconditioned theoretical mean containing probability for each lambda.
+Examine whether the normal approximation wound still hold given the $lambda$ is unbiased estimation.
+
+
+
