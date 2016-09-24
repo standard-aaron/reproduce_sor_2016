@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww18080\viewh16080\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \\section\{Review on Hypothesis Test 2\}\
+\
+The second hypothesis testing is based on the calculating of \expnd0\expndtw0\kerning0
+exact probability. The improvement of this method is its \'91accuracy\'92. The p-value of the occurrence of RTS\'92s experiments can be derived not depending on a rough bound. The only limitation seems to be the algorithms one choose to calculate the Poisson binomial distributions. \
+\
+However, there are two major flaws needed to be addressed if we look into details of the procedure. First calculating the probability of a triple of independent, identical Poisson random variables includes its rounded mean for each \\lambda, then plugging in the real data triplets with the sample mean being the estimate of its Poisson parameters \\lambda, the author then derives the corresponding p-value using the efficient algorithms for Poisson binomial random variable.\
+\
+We again mention the validity of the independent Poisson assumptions. We can try to simulate the comparisons between different properties (sample variance against sample mean, etc\'85), but the consistency of the simulation results with the real data may not be able to guarantee the validity of Poisson assumption too. For example, if we compare the real data with Binomial(n,p), or compare the real data with Negative Binomial(n,p), or compare the real data with Poisson(\\lambda), the confusion is merely \'93not to reject the Binomial/NegBinomial/Poisson assumption\'94.  (Please refer to section XXX for our tests). \
+In the second step, though it is reasonable to use MLE estimator as the \\lambda in midprob table, the small sample size (always equal 3) cannot guarantee the asymptotic distribution of the sample mean as a convincing choice. We need sample size to be large enough for MLE estimators to approximate the Normal distribution. Nevertheless, with the settings of the author, that all triplets are independent but not identical, this requirement can not be matched. If we accumulate such approximation errors over hundreds of multiplication, the p-value shouldn\'92t be trusted despite its \'91accuracy\'92.\
+Thirdly, the success times in RTS\'92s Poisson binomial is much larger than other investigators (690 v.s. 109). This might also be the reason why multiplication of many binomials leads to smaller p-values in RTS\'92s experiments. (But I\'92m not clear how to address this mathematically and rigorously).\
+\
+\
+Minor issues: \
+\kerning1\expnd0\expndtw0 Filtering like gap >= 2 and others should be clarified.\
+R scripts and specific OSF data positions should be provided.\
+In section \expnd0\expndtw0\kerning0
+TERMINAL DIGIT ANALYSIS, the author agrees that the data is not precise enough to perform the Mosimann\'92s Uniform last digit technique. The author again used simulation of identical Poisson triplets to justify the uniformity of means\'92 last digit. This contradicts with Mosimann\'92s assumption, only complementing with author\'92s own simulation (based on potentially wrong Poisson model). However, this can be used to track different patterns between RTS and other investigators. But we may not use this as a evidence of RTS\'92s manipulating data.\
+\
+}

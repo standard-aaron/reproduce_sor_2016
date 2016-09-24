@@ -1,0 +1,17 @@
+Major:
+1, Hypothesis Testing 1 design: First of all, it remains unclear why RTI is tested against the other investigators in the first place. He could be cherry-picked from the ten investigators which will make the test result untrustworthy. It might be better to consider a different test where each investigator will be tested against all the others. Secondly, the motivation why this mid-ratio test has been proposed remains unclear. Without a clear explanation, we cannot know how many alternative hypothesis tests have been consider before this one. The concern behind this is that if the author tests too many null hypotheses on the data, eventually there will always be some null hypotheses being rejected. A better way to do this is to keep a validation set and only use it once when you decide what null hypothesis you are going to test. FInally, the Poisson distribution assumption is unjustified in the paper. If the author has some reasons why it is valid, please include a citation; otherwise, we suggest using a more non-parametric test. For example, assume the population is the whole sample set and test the hypothesis using this distribution assumption.
+ 
+
+Minor:
+
+Page 5: Since there are only 109 mean containing ... essentially one. Although this paragraph is no more than stating a fact, it can be a little bit misleading. Because 0.42 is only a upperbound for containing mid-ratio probability, so this paragraph only says that hypothesis testing 1 cannot reject null hypothesis that triples from other investigators is from Poisson distribution. But a more refined experiment might reject this null hypothesis.
+
+Figure 1: The author should clarify what data preprocessing has been used to obtain this plot. When all 1343 triples are used, the last bar (0.9~1.0) appears to be higher than what shown in the paper. Another issue is the whether each bin contains its left or right endpoint. For example, if the triple is 4, 5, 6, then the mid ratio is 0.5, then should it belong to 0.4~0.5 or 0.5~0.6?
+
+Table 1: The explanation under Table 1 is not accurate. The probability showed in the table is that a triple contained its rounded mean AND with a gap bigger than 1.
+
+Table 2: Although mentioned in the note, it is unclear why triples with gap equal to 1 being abondaned. Although this is not a very big portion, this preprocessing needs some justfication if possible.
+
+Data Prepocessing: For the Coulter counts data, we found there are some extreme triples that are far away from the others. Should this be excluded when the author did all the experiments?
+
+
